@@ -1,50 +1,58 @@
-# React + TypeScript + Vite
+# React Currency Converter App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React application written in TypeScript that allows users to convert between different currencies. The app uses a backend API in Golang to fetch the conversion rates.
 
-Currently, two official plugins are available:
+## Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Before you begin, ensure you have the following installed on your local machine:
 
-## Expanding the ESLint configuration
+- **Node.js**: Required to run the app. Download and install from [nodejs.org](https://nodejs.org/).
+- **npm**: Node.js comes with npm pre-installed. Verify the installation by running:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+  ```sh
+  npm -v
+  ```
 
-- Configure the top-level `parserOptions` property like this:
+- **TypeScript**: Although TypeScript comes installed as a dependency, you can globally install TypeScript to use it directly in the command line:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+  ```sh
+  npm install -g typescript
+  ```
+
+## Installation
+
+1. Clone the repository:
+
+    ```sh
+    git clone https://github.com/a-drawn-pixel/react_currency_converter.git
+    ```
+
+2. Install the dependencies:
+
+    ```sh
+    npm install
+    ```
+
+## Running the Application
+
+To start the development server, run:
+
+```sh
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+This will start the app on `http://localhost:3000`. Open your browser and go to this address to view your application.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Testing
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+To run the tests for the application, use:
+
+```sh
+npm run test
 ```
+
+This will execute the test suite configured for the app, providing feedback on any test cases that pass or fail.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
